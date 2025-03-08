@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\TransactionController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +16,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view ('welcome');
 });
+
+Route::get('/easy',[TransactionController::class,'getBData1']);
+
+Route::get('/medium',[TransactionController::class,'getBData2']);
+
+Route::get('/hard',[TransactionController::class,'getBData3']);
+
+Route::get('/defficult',[TransactionController::class,'getBData4']);
